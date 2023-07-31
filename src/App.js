@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import LikeButton from './components/LikeButton'; //iteration 8
+import ClickablePicture from './components/ClickablePicture'; //iteration 9
+import Dice from './components/Dice'; //iteration 10
+import Carousel from './components/Carousel'; //iteration 11
 
-function App() {
+function App(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LikeButton/>
+      <ClickablePicture img='maxence.png' imgClicked='maxence-glasses.png'/>
+      <Dice/>
+      <Carousel
+        images={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg'
+        ]}
+      />
     </div>
   );
 }
