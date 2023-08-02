@@ -1,13 +1,16 @@
-import './App.css';
-import LikeButton from './components/LikeButton'; //iteration 8
-import ClickablePicture from './components/ClickablePicture'; //iteration 9
-import Dice from './components/Dice'; //iteration 10
-import Carousel from './components/Carousel'; //iteration 11
+// import './App.css';
+// import LikeButton from './components/LikeButton'; //iteration 8
+// import ClickablePicture from './components/ClickablePicture'; //iteration 9
+// import Dice from './components/Dice'; //iteration 10
+// import Carousel from './components/Carousel'; //iteration 11
+// import NumbersTable from './components/NumbersTable'; //iteration 12
+// import FaceBook from './components/FaceBook'; //iteration 13 and 14
+import SignupPage from './components/SignupPage'; //iteration 15
 
 function App(){
   return (
     <div className="App">
-      <LikeButton/>
+      {/* <LikeButton/>
       <ClickablePicture img='maxence.png' imgClicked='maxence-glasses.png'/>
       <Dice/>
       <Carousel
@@ -18,6 +21,9 @@ function App(){
           'https://randomuser.me/api/portraits/men/2.jpg'
         ]}
       />
+      <NumbersTable limit={15}/>
+      <FaceBook/> */}
+      <SignupPage/>
     </div>
   );
 }

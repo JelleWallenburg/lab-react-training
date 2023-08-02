@@ -1,21 +1,30 @@
 import { useState } from "react";
 
 function Carousel(props){
-    const {img} = props;
-    const img1= img[0];
-    const img2= img[1];
-    const img3= img[2];
-    const img4= img[3];
+    const {images} = props;
 
-    const [imgDisplay, setImgDisplay] = useState[0]
+    const [imgDisplay, setImgDisplay] = useState(0);
 
-    
+    const nextImage = () => {
+        if (imgDisplay < images.length - 1){
+        setImgDisplay(imgDisplay + 1)
+        }
+        else (setImgDisplay(0))
+       };
+
+    const previousImage = () => {
+        if (imgDisplay > 0){
+        setImgDisplay(imgDisplay - 1)
+        }
+        else (setImgDisplay(images.length -1))
+       };
 
     return(
         <div>
-            <img/>
-            <button>Left</button>
-            <button>Right</button>
+            <img src={images[imgDisplay]} alt='profile'/>
+            <br/>
+             <button onClick={() => previousImage()}>Left</button>
+            <button onClick={()=> nextImage()}>Right</button>
         </div>
 
     )
